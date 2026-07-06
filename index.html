@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Landing page moderna y vibrante para mostrar tus servicios web en Vercel."
+      content="Registro de pacientes médicos con formulario seguro y diseño profesional para clínicas y consultorios."
     />
-    <title>MiPágina | Diseño web creativo</title>
+    <title>Registro de Pacientes | MiClínica</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -20,85 +20,130 @@
     <div class="page-shell">
       <header class="hero" id="inicio">
         <nav class="nav">
-          <a class="brand" href="#inicio">MiPágina</a>
+          <a class="brand" href="#inicio">MiClínica</a>
           <div class="nav-links">
-            <a href="#servicios">Servicios</a>
-            <a href="#proyectos">Proyectos</a>
+            <a href="#registro">Registro</a>
+            <a href="#beneficios">Beneficios</a>
             <a href="#contacto">Contacto</a>
           </div>
         </nav>
 
         <div class="hero-grid">
           <div class="hero-copy">
-            <p class="eyebrow">Diseño web que impacta</p>
-            <h1>Crea una presencia online clara, rápida y memorable.</h1>
+            <p class="eyebrow">Gestión de pacientes</p>
+            <h1>Registra pacientes de forma rápida, segura y profesional.</h1>
             <p class="lead">
-              Transformo ideas en sitios web atractivos, fáciles de usar y listos para destacar en Vercel.
+              Crea un sistema de registro para tu consultorio con un formulario sencillo y una experiencia clara para el personal médico.
             </p>
             <div class="hero-actions">
-              <a class="btn btn-primary" href="#contacto">Solicitar presupuesto</a>
-              <a class="btn btn-outline" href="#servicios">Ver servicios</a>
+              <a class="btn btn-primary" href="#registro">Abrir formulario</a>
+              <a class="btn btn-outline" href="#beneficios">Ver beneficios</a>
             </div>
           </div>
 
-          <div class="hero-panel" aria-label="Resumen de servicios">
-            <h3>Tu sitio incluye</h3>
+          <div class="hero-panel" aria-label="Registro de pacientes">
+            <h3>¿Qué puedes hacer?</h3>
             <ul>
-              <li>Diseño personalizado</li>
-              <li>Adaptado a móviles</li>
-              <li>SEO básico</li>
-              <li>Despliegue en Vercel</li>
+              <li>Registrar nuevos pacientes</li>
+              <li>Guardar datos de contacto</li>
+              <li>Registrar síntomas y médico asignado</li>
+              <li>Historial inicial disponible</li>
             </ul>
           </div>
         </div>
       </header>
 
       <main>
-        <section class="section cards-section" id="servicios">
+        <section class="section form-section" id="registro">
           <div class="section-header">
-            <p class="eyebrow">Servicios</p>
-            <h2>Todo lo que necesitas para tu web</h2>
+            <p class="eyebrow">Formulario</p>
+            <h2>Registro de paciente</h2>
           </div>
-          <div class="grid cards-grid">
-            <article class="card">
-              <span class="card-icon">🌐</span>
-              <h3>Landing Pages</h3>
-              <p>Presenta tu servicio con una página moderna que convierte visitantes en clientes.</p>
-            </article>
-            <article class="card">
-              <span class="card-icon">🛒</span>
-              <h3>Tiendas en línea</h3>
-              <p>Configuración de ecommerce simple, rápida y optimizada para vender desde el primer día.</p>
-            </article>
-            <article class="card">
-              <span class="card-icon">✨</span>
-              <h3>Portafolios</h3>
-              <p>Muestra tu trabajo con estilo y crea una identidad digital profesional.</p>
-            </article>
+          <div class="form-grid">
+            <form class="patient-form" id="patientForm">
+              <div class="field-group">
+                <label for="name">Nombre completo</label>
+                <input id="name" name="name" type="text" placeholder="Juan Pérez" required />
+              </div>
+              <div class="field-group">
+                <label for="document">Documento</label>
+                <input id="document" name="document" type="text" placeholder="DNI o pasaporte" required />
+              </div>
+              <div class="field-row">
+                <div class="field-group">
+                  <label for="birthdate">Fecha de nacimiento</label>
+                  <input id="birthdate" name="birthdate" type="date" required />
+                </div>
+                <div class="field-group">
+                  <label for="phone">Teléfono</label>
+                  <input id="phone" name="phone" type="tel" placeholder="+34 600 123 456" required />
+                </div>
+              </div>
+              <div class="field-group">
+                <label for="email">Correo electrónico</label>
+                <input id="email" name="email" type="email" placeholder="paciente@correo.com" />
+              </div>
+              <div class="field-group">
+                <label for="address">Dirección</label>
+                <input id="address" name="address" type="text" placeholder="Calle Falsa 123" />
+              </div>
+              <div class="field-group">
+                <label for="symptoms">Síntomas / motivo de consulta</label>
+                <textarea id="symptoms" name="symptoms" rows="4" placeholder="Describe brevemente los síntomas"></textarea>
+              </div>
+              <div class="field-group">
+                <label for="doctor">Médico asignado</label>
+                <select id="doctor" name="doctor" required>
+                  <option value="">Seleccionar médico</option>
+                  <option>Dr. García</option>
+                  <option>Dra. Torres</option>
+                  <option>Dr. López</option>
+                </select>
+              </div>
+              <button class="btn btn-primary" type="submit">Registrar paciente</button>
+              <p class="form-feedback" id="formFeedback"></p>
+            </form>
+
+            <div class="form-highlight">
+              <h3>Registra pacientes con confianza</h3>
+              <p>
+                Un formulario claro ayuda a tu equipo a capturar los datos esenciales y mantener un flujo de atención más eficiente.
+              </p>
+              <div class="benefit-list">
+                <div class="benefit-item">
+                  <span>🩺</span>
+                  <p>Datos clínicos accesibles</p>
+                </div>
+                <div class="benefit-item">
+                  <span>🗂️</span>
+                  <p>Historia inicial lista</p>
+                </div>
+                <div class="benefit-item">
+                  <span>✅</span>
+                  <p>Proceso rápido y limpio</p>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
 
-        <section class="section showcase" id="proyectos">
-          <div class="showcase-copy">
-            <p class="eyebrow">Proyectos destacados</p>
-            <h2>Diseños limpios con impacto visual.</h2>
-            <p>
-              Cada página que hago está optimizada para velocidad, usabilidad y lanzamiento en Vercel.
-              Es un proceso directo: diseño, desarrollo y publicación.
-            </p>
+        <section class="section benefits" id="beneficios">
+          <div class="section-header">
+            <p class="eyebrow">Beneficios</p>
+            <h2>Por qué elegir esta solución</h2>
           </div>
-          <div class="showcase-list">
+          <div class="grid benefits-grid">
             <article class="feature-card">
-              <h4>Velocidad real</h4>
-              <p>Optimización para carga rápida y buena experiencia en móviles.</p>
+              <h4>Control completo</h4>
+              <p>Organiza el registro de tus pacientes en un solo lugar y reduce errores manuales.</p>
             </article>
             <article class="feature-card">
-              <h4>Control total</h4>
-              <p>Fácil edición de contenido y actualizaciones rápidas.</p>
+              <h4>Atención más rápida</h4>
+              <p>El personal puede ver datos importantes antes de la consulta.</p>
             </article>
             <article class="feature-card">
-              <h4>Soporte visual</h4>
-              <p>Diseños modernos con tipografías y colores que resaltan tu marca.</p>
+              <h4>Diseño responsivo</h4>
+              <p>Funciona bien en escritorio, tablet y móvil para el consultorio o la recepción.</p>
             </article>
           </div>
         </section>
@@ -107,13 +152,13 @@
       <footer class="footer" id="contacto">
         <div class="footer-copy">
           <p class="eyebrow">Contacto</p>
-          <h2>Preparado para tu próximo sitio web?</h2>
+          <h2>Listo para llevar tu consultorio al siguiente nivel</h2>
           <p>
-            Envíame un mensaje y te ayudo a convertir tu idea en una página profesional con publicación en Vercel.
+            Actualiza tu gestión de pacientes con una página clara, moderna y fácil de usar.
           </p>
-          <a class="btn btn-secondary" href="mailto:hola@tuempresa.com">Escríbeme</a>
+          <a class="btn btn-secondary" href="mailto:hola@tuempresa.com">Pedir más información</a>
         </div>
-        <p class="footer-note">© <span id="year"></span> MiPágina. Listo para Vercel.</p>
+        <p class="footer-note">© <span id="year"></span> MiClínica. Registro médico moderno.</p>
       </footer>
     </div>
 

@@ -1,13 +1,14 @@
 :root {
-  --bg: #04101f;
-  --surface: rgba(255, 255, 255, 0.08);
-  --surface-strong: rgba(255, 255, 255, 0.14);
-  --text: #eef3ff;
-  --muted: #a9b8db;
-  --primary: #5c7dff;
-  --primary-soft: #8aa3ff;
-  --border: rgba(255, 255, 255, 0.12);
-  --shadow: 0 24px 80px rgba(0, 0, 0, 0.18);
+  --bg: #f2f7fb;
+  --surface: #ffffff;
+  --surface-soft: rgba(255, 255, 255, 0.9);
+  --text: #0f172a;
+  --muted: #64748b;
+  --primary: #2563eb;
+  --primary-soft: #60a5fa;
+  --success: #16a34a;
+  --border: rgba(15, 23, 42, 0.08);
+  --shadow: 0 24px 60px rgba(15, 23, 42, 0.08);
 }
 
 * {
@@ -21,9 +22,7 @@ html {
 body {
   margin: 0;
   font-family: 'Inter', sans-serif;
-  background: radial-gradient(circle at top left, rgba(92, 125, 255, 0.18), transparent 30%),
-    radial-gradient(circle at bottom right, rgba(46, 176, 236, 0.15), transparent 25%),
-    linear-gradient(180deg, #05101e 0%, #081b33 100%);
+  background: linear-gradient(180deg, #eef7ff 0%, #f9fbff 100%);
   color: var(--text);
 }
 
@@ -47,14 +46,15 @@ a {
 
 .brand {
   font-weight: 800;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   letter-spacing: 0.05em;
+  color: #1d4ed8;
 }
 
 .nav-links {
   display: flex;
   gap: 1.6rem;
-  font-weight: 500;
+  font-weight: 600;
   color: var(--muted);
 }
 
@@ -72,28 +72,28 @@ a {
 }
 
 .hero-copy {
-  max-width: 620px;
+  max-width: 640px;
 }
 
 .eyebrow {
   display: inline-block;
   margin-bottom: 1rem;
   text-transform: uppercase;
-  letter-spacing: 0.25em;
+  letter-spacing: 0.2em;
   font-size: 0.75rem;
-  color: var(--primary-soft);
+  color: #2563eb;
   font-weight: 700;
 }
 
 .hero h1 {
   margin: 0;
-  font-size: clamp(3rem, 5vw, 4.8rem);
+  font-size: clamp(3rem, 5vw, 4.4rem);
   line-height: 1.02;
 }
 
 .lead {
   margin: 1.4rem 0;
-  max-width: 630px;
+  max-width: 640px;
   color: var(--muted);
   font-size: 1.05rem;
 }
@@ -126,18 +126,17 @@ a {
 }
 
 .btn-outline {
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  color: var(--text);
-  background: transparent;
+  border: 1px solid rgba(37, 99, 235, 0.18);
+  color: var(--primary);
+  background: white;
 }
 
 .hero-panel {
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: var(--surface-soft);
+  border: 1px solid var(--border);
   border-radius: 28px;
   padding: 2rem;
   box-shadow: var(--shadow);
-  backdrop-filter: blur(16px);
 }
 
 .hero-panel h3 {
@@ -153,7 +152,7 @@ a {
 
 .hero-panel li {
   margin-bottom: 1rem;
-  color: var(--muted);
+  color: var(--text);
   line-height: 1.8;
 }
 
@@ -169,71 +168,105 @@ a {
   margin-bottom: 2rem;
 }
 
-.cards-section h2,
-.showcase-copy h2,
+.section-header h2,
 .footer-copy h2 {
   margin: 0;
-  font-size: clamp(2rem, 3.2vw, 3rem);
+  font-size: clamp(2rem, 3vw, 3rem);
 }
 
-.cards-grid,
-.showcase-list {
+.form-section {
+  padding-top: 0;
+}
+
+.form-grid {
   display: grid;
-  gap: 1.5rem;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 2rem;
 }
 
-.cards-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
-.card,
+.patient-form,
+.form-highlight,
 .feature-card {
-  padding: 1.8rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
   border-radius: 24px;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 2rem;
   box-shadow: var(--shadow);
 }
 
-.card-icon {
-  display: inline-flex;
-  width: 3rem;
-  height: 3rem;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 1.2rem;
-  border-radius: 18px;
-  background: rgba(92, 125, 255, 0.18);
-  font-size: 1.4rem;
-}
-
-.card h3,
-.feature-card h4 {
-  margin-top: 0;
-}
-
-.feature-card p,
-.card p {
-  margin: 0.9rem 0 0;
-  color: var(--muted);
-  line-height: 1.75;
-}
-
-.showcase {
+.field-group {
   display: grid;
-  grid-template-columns: 1.2fr 0.9fr;
-  gap: 2rem;
-  align-items: start;
+  gap: 0.5rem;
+  margin-bottom: 1.4rem;
 }
 
-.showcase-copy p {
-  color: var(--muted);
-  max-width: 620px;
-  line-height: 1.8;
+.field-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
 }
 
-.showcase-list {
-  grid-template-columns: 1fr;
+label {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 0.95rem 1rem;
+  border-radius: 18px;
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  background: white;
+  color: var(--text);
+  font: inherit;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.patient-form button {
+  margin-top: 0.5rem;
+}
+
+.form-feedback {
+  margin-top: 1rem;
+  color: var(--success);
+  min-height: 1.5rem;
+}
+
+.benefit-list {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.benefit-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  color: var(--text);
+}
+
+.benefit-item span {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.benefits {
+  background: linear-gradient(180deg, #f9fbff 0%, #eef7ff 100%);
+}
+
+.benefits-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.feature-card {
+  background: white;
+  padding: 1.8rem;
 }
 
 .footer {
@@ -257,13 +290,15 @@ a {
   margin: 0;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 940px) {
   .hero-grid,
-  .showcase {
+  .form-grid,
+  .showcase,
+  .benefits-grid {
     grid-template-columns: 1fr;
   }
 
-  .cards-grid {
+  .field-row {
     grid-template-columns: 1fr;
   }
 }
@@ -280,7 +315,7 @@ a {
   }
 
   .hero h1 {
-    font-size: 2.8rem;
+    font-size: 2.5rem;
   }
 
   .hero-actions {
