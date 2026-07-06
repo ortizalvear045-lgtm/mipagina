@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Landing page moderna para tu proyecto web lista para desplegar en Vercel."
+    />
+    <title>Mi Página</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <nav class="nav">
+        <a class="brand" href="#inicio">MiPágina</a>
+        <div class="nav-links">
+          <a href="#servicios">Servicios</a>
+          <a href="#sobre-mi">Sobre mí</a>
+          <a href="#contacto">Contacto</a>
+        </div>
+      </nav>
+
+      <section class="hero-content" id="inicio">
+        <div class="hero-copy">
+          <p class="eyebrow">Diseño y desarrollo web</p>
+          <h1>Tu proyecto online, con presencia profesional.</h1>
+          <p class="lead">
+            Creamos sitios modernos, rápidos y optimizados para convertir visitas en clientes.
+          </p>
+          <a class="btn btn-primary" href="#contacto">Comenzar ahora</a>
+        </div>
+        <div class="hero-card" aria-label="Resumen del servicio">
+          <h3>Qué incluye</h3>
+          <ul>
+            <li>Diseño responsive</li>
+            <li>Experiencia de usuario cuidada</li>
+            <li>Optimización para móviles</li>
+            <li>Listo para Vercel</li>
+          </ul>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <section class="section" id="servicios">
+        <div class="section-title">
+          <p class="eyebrow">Servicios</p>
+          <h2>Soluciones web pensadas para crecer</h2>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <h3>Landing Pages</h3>
+            <p>Diseños atractivos para captar leads y presentar tu propuesta.</p>
+          </article>
+          <article class="card">
+            <h3>Tiendas online</h3>
+            <p>Experiencias de compra sencillas, rápidas y preparadas para vender.</p>
+          </article>
+          <article class="card">
+            <h3>Portafolios</h3>
+            <p>Presencia profesional para mostrar tu trabajo con estilo.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section alt-section" id="sobre-mi">
+        <div class="section-title">
+          <p class="eyebrow">Sobre mí</p>
+          <h2>Diseño con enfoque en resultados</h2>
+        </div>
+        <p class="about-text">
+          Esta plantilla está lista para que la adaptes a tu marca, negocio o proyecto personal.
+          Puedes cambiar textos, colores, añadir secciones y desplegarla sin complicaciones en Vercel.
+        </p>
+      </section>
+    </main>
+
+    <footer class="footer" id="contacto">
+      <h2>¿Listo para llevar tu web al siguiente nivel?</h2>
+      <a class="btn btn-secondary" href="mailto:hola@tuempresa.com">Contáctame</a>
+      <p>© <span id="year"></span> MiPágina. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
