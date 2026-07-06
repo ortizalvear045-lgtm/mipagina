@@ -28,7 +28,8 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       try {
-        const response = await fetch('/api/register', {
+        const endpoint = (window && window.BACKEND_URL) ? window.BACKEND_URL : '/api/register';
+        const response = await fetch(endpoint, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
