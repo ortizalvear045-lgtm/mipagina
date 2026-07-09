@@ -93,7 +93,8 @@ doc.add_paragraph('URL de despliegue: https://mipagina-alpha.vercel.app')
 
 for section in content['sections']:
     doc.add_heading(section['heading'], level=1)
-    doc.add_paragraph(section['text'])
+    if section.get('text'):
+        doc.add_paragraph(section.get('text'))
     if 'list' in section:
         for item in section['list']:
             doc.add_paragraph(item, style='List Bullet')

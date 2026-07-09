@@ -5,11 +5,14 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.get('/health', (req, res) => {
+const sendHealth = (req, res) => {
   res.json({ ok: true, message: 'API funcionando (Render)', timestamp: Date.now() });
-});
+};
 
-app.post('/register', (req, res) => {
+app.get('/health', sendHealth);
+app.get('/api/health', sendHealth);
+
+const registerPatient = (req, res) => {
   const body = req.body || {};
   const { name, document, birthdate, phone, doctor } = body;
 
@@ -33,7 +36,10 @@ app.post('/register', (req, res) => {
 
   // Aquí solo simulamos persistencia en memoria; para producción usar BD.
   res.json({ success: true, message: 'Paciente registrado correctamente (Render).', patient: patientRecord });
-});
+};
+
+app.post('/register', registerPatient);
+app.post('/api/register', registerPatient);
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
